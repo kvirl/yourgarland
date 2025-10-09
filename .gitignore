@@ -1,0 +1,66 @@
+# Конфигурационные файлы
+config.php
+*.env
+.env.local
+.env.production
+
+# Базы данных
+*.sql
+*.db
+*.myd
+*.myi
+*.frm
+/database/backups/
+
+# Логи
+*.log
+error_log
+php_errors.log
+
+# Системные файлы
+.htaccess
+.htpasswd
+web.config
+
+# Временные файлы
+*.tmp
+*.temp
+/cache/
+/rate_limits/          
+
+# Файлы редактора
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Зависимости
+/vendor/
+/composer.lock
+/node_modules/         
+/package-lock.json    
+
+# Файлы ОС
+.DS_Store
+Thumbs.db
+
+# Резервные копии и дампы
+*.bak
+*.backup
+*.save
+
+# Файлы сессий (если используешь)
+/sessions/
+*.sess
+
+# Файлы загрузок (если есть)
+/uploads/temp/       
+
+# Файлы кэша шаблонов (если используешь шаблонизатор)
+/templates/cache/
+
+# Файлы минификации/сборки
+/build/
+/dist/
+*.min.js
+*.min.css
