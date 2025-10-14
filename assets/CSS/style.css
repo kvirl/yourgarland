@@ -360,7 +360,6 @@ body {
 #js_1.element-show {
 	opacity: 1;
 	transition: all 1.5s;
-
 	transform: translateY(0%);
 }
 #js_2 {
@@ -397,7 +396,7 @@ body {
 	text-wrap: balance;
 }
 .services {
-	height: 700px;
+	height: auto;
 	width: 100%;
 	margin-top: 200px;
 	display: flex;
@@ -423,6 +422,7 @@ body {
 	margin-bottom: 50px;
 	font-size: 60px;
 	font-weight: 500;
+	margin-top: 20px;
 }
 .text_2:last-child {
 	margin-bottom: 50px;
@@ -471,7 +471,7 @@ body {
 .lighting {
 	background-color: white;
 	width: 100%;
-	height: 900px;
+	height: auto;
 	margin-top: 200px;
 	display: flex;
 	align-items: center;
@@ -533,32 +533,8 @@ body {
 		transform: rotate(1turn);
 	}
 }
-.card_1 {
-	background-color: #dcdcdc69;
-	width: 30%;
-	height: 600px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	border-radius: 10px;
-	box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
-		rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
-		rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
-		rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
-}
-.card_2 {
-	background-color: #dcdcdc69;
-	width: 30%;
-	height: 600px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	border-radius: 10px;
-	box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
-		rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
-		rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
-		rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
-}
+.card_1,
+.card_2,
 .card_3 {
 	background-color: #dcdcdc69;
 	width: 30%;
@@ -634,7 +610,7 @@ body {
 	right: 10px;
 }
 .block5 {
-	height: 100%;
+	height: auto;
 	width: 100%;
 	margin-top: 200px;
 	display: flex;
@@ -731,9 +707,6 @@ body {
 .text_heading {
 	font-size: 70px;
 	font-weight: 500;
-}
-.text_heading {
-	margin-top: 60px;
 }
 .text_home {
 	display: flex;
@@ -1321,9 +1294,10 @@ a[href^='tel:'] {
 	align-items: center;
 	justify-content: start;
 	flex-direction: column;
-	height: 1100px;
+	height: auto;
 	width: 100%;
 	margin-top: 200px;
+	margin-bottom: 50px;
 	background-color: white;
 	box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
 		rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
@@ -1339,6 +1313,7 @@ a[href^='tel:'] {
 	width: 40%;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 	position: relative;
+	margin-bottom: 50px;
 }
 .form_rev {
 	background-color: white;
@@ -2088,6 +2063,18 @@ a[href^='tel:'] {
 		.text_2:first-child {
 			font-size: 50px;
 		}
+		.item_logo {
+			font-size: 20px !important;
+			white-space: nowrap;
+		}
+
+		.line::after {
+			content: '|' !important;
+			margin: 0 5px;
+		}
+		.item_a {
+			font-size: 20px;
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -2159,8 +2146,6 @@ a[href^='tel:'] {
 		.burger.active span::after {
 			background: #333;
 		}
-	}
-	@media (max-width: 768px) {
 		.burger {
 			display: flex !important;
 		}
@@ -2168,6 +2153,297 @@ a[href^='tel:'] {
 		.nav-bar {
 			justify-content: space-between;
 			padding: 0 20px;
+		}
+		.block {
+			height: auto !important;
+			min-height: 300px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 60px !important;
+		}
+
+		.main_container {
+			flex-direction: column;
+			height: auto;
+		}
+
+		.block:first-child,
+		.block:last-child {
+			width: 100% !important;
+			height: 50vh;
+		}
+		.prev-button,
+		.next-button {
+			width: 60px !important;
+			height: 60px !important;
+			font-size: 30px !important;
+			min-height: 44px;
+			min-width: 44px;
+		}
+
+		.icon {
+			padding: 20px !important;
+			min-width: 60px;
+			min-height: 60px;
+		}
+		.text__right:first-child {
+			font-size: 32px !important;
+			line-height: 1.2;
+		}
+
+		.text__right {
+			font-size: 18px !important;
+		}
+
+		.text_2:first-child {
+			font-size: 36px !important;
+		}
+
+		.heading_home {
+			font-size: 28px !important;
+		}
+		.img_lighting {
+			height: 400px !important;
+			object-fit: cover;
+		}
+
+		.photo_sub_block {
+			width: 80px !important;
+			height: 80px !important;
+		}
+		.card {
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.block_3:last-child {
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		.sub_block {
+			width: 100% !important;
+		}
+		body {
+			overflow-x: hidden;
+			width: 100%;
+		}
+
+		.main_containers,
+		.header_container,
+		.nav-bar {
+			max-width: 100vw;
+			overflow-x: hidden;
+		}
+		.form {
+			width: 95% !important;
+			margin: 0 auto;
+		}
+
+		.input-container {
+			width: 90% !important;
+		}
+
+		.form-left-decoration,
+		.form-right-decoration,
+		.circle {
+			display: none;
+		}
+		.nav-link.open {
+			width: 100% !important;
+			right: 0;
+		}
+
+		.ul-nav {
+			gap: 20px !important;
+		}
+
+		.item_a {
+			font-size: 20px !important;
+			padding: 15px 20px !important;
+		}
+		/* МОБИЛЬНАЯ ОПТИМИЗАЦИЯ - АДАПТИВНЫЕ ВЫСОТЫ */
+		.block,
+		.text_blocks,
+		.services,
+		.lighting,
+		.home,
+		.form_block,
+		.container_contact,
+		.responsive-container-block,
+		.img_block_about,
+		.text_block_about,
+		.card_ab,
+		.block5,
+		.home_container {
+			height: auto !important;
+			min-height: unset !important;
+		}
+
+		/* Адаптивные высоты для блоков */
+		.block {
+			height: auto;
+			min-height: 300px;
+		}
+
+		.text_blocks {
+			height: auto;
+			min-height: 200px;
+			margin-top: 100px !important;
+		}
+
+		.services {
+			height: auto;
+			min-height: 800px;
+			margin-top: 100px !important;
+		}
+
+		.lighting {
+			height: auto;
+			min-height: 1800px;
+			margin-top: 100px !important;
+		}
+
+		.home {
+			height: auto;
+			min-height: 500px;
+			margin-top: 50px !important;
+		}
+
+		/* Исправляем структуру блоков */
+		.main_container {
+			flex-direction: column;
+			height: auto;
+		}
+
+		.block:first-child,
+		.block:last-child {
+			width: 100% !important;
+			height: 50vh; /* Относительная высота */
+		}
+
+		.block:first-child {
+			min-height: 300px;
+		}
+
+		.text_right {
+			padding: 40px 20px;
+			gap: 20px;
+		}
+
+		/* Исправляем блоки услуг */
+		.block_3:last-child {
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		.sub_block {
+			width: 100% !important;
+			height: auto !important;
+			min-height: 300px;
+			padding: 20px;
+		}
+
+		.item_text_2 {
+			height: auto !important;
+			min-height: unset;
+			margin-bottom: 20px;
+		}
+
+		/* Карточки с освещением */
+		.card {
+			gap: 30px;
+			height: auto;
+		}
+
+		.cards {
+			height: auto !important;
+			min-height: 600px;
+		}
+
+		.card_1,
+		.card_2,
+		.card_3 {
+			width: 90% !important;
+			height: auto !important;
+		}
+
+		/* Примеры работ */
+		.home,
+		.homes2 {
+			flex-direction: column;
+			gap: 30px;
+			height: auto;
+		}
+
+		.home .slider_container,
+		.homes2 .slider_container {
+			width: 90% !important;
+			height: 400px;
+		}
+		.homes,
+		.homes2,
+		.home {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.text_home {
+			width: 100% !important;
+			height: auto;
+			text-align: center;
+			padding: 20px;
+		}
+		/* Форма */
+		.form_block {
+			height: auto;
+			min-height: 800px;
+			margin-top: 100px !important;
+			padding: 40px 20px;
+		}
+
+		.form {
+			width: 95% !important;
+			height: auto;
+			min-height: 500px;
+			padding: 40px 20px;
+		}
+
+		/* Уменьшаем отступы */
+		.text_blocks,
+		.services,
+		.lighting,
+		.block5,
+		.form_block {
+			margin-top: 100px !important;
+		}
+
+		/* Улучшаем читаемость текста */
+		.text__right:first-child {
+			font-size: 32px !important;
+			line-height: 1.3;
+		}
+
+		.text__right {
+			font-size: 18px !important;
+			line-height: 1.5;
+		}
+
+		.text_2:first-child {
+			font-size: 36px !important;
+			margin-top: 40px;
+		}
+		.text_2:last-child {
+			font-size: 20px !important;
+		}
+		.heading_home {
+			font-size: 28px !important;
+		}
+		.item_text_1,
+		.item_text_2 {
+			font-size: 18px;
 		}
 	}
 	@media screen and (max-width: 767px) {
@@ -2352,8 +2628,7 @@ a[href^='tel:'] {
 
 		.home .slider_container,
 		.homes2 .slider_container {
-			width: 90%;
-			height: 500px;
+			height: 300px;
 			-o-object-fit: cover;
 			object-fit: cover;
 		}
@@ -2485,6 +2760,39 @@ a[href^='tel:'] {
 			font-size: 20px;
 		}
 	}
+	@media (max-width: 480px) {
+		.block {
+			min-height: 250px;
+		}
+
+		.text_blocks,
+		.services,
+		.lighting,
+		.block5,
+		.form_block {
+			margin-top: 50px !important;
+		}
+
+		.services {
+			min-height: 1000px;
+		}
+
+		.lighting {
+			min-height: 2000px;
+		}
+
+		.sub_block {
+			min-height: 250px;
+		}
+
+		.text__right:first-child {
+			font-size: 28px !important;
+		}
+
+		.text__right {
+			font-size: 16px !important;
+		}
+	}
 	@media screen and (max-width: 410px) {
 		.text {
 			font-size: 17px;
@@ -2524,7 +2832,13 @@ a[href^='tel:'] {
 			width: 90%;
 		}
 		.text_2:first-child {
-			font-size: 30px;
+			font-size: 28px !important;
+		}
+		.img_lighting {
+			height: 300px !important;
+		}
+		.cards {
+			min-height: 450px !important;
 		}
 	}
 }
