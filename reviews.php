@@ -2,7 +2,8 @@
 if (isset($_POST['submit'])) {
     $conn = new mysqli("", "", "", "");
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        error_log("DB connection failed: " . $conn->connect_error);
+        die("Ошибка подключения к базе данных");
     }
     $firstname = htmlspecialchars(trim($_POST['firstname']));
     $lastname = htmlspecialchars(trim($_POST['lastname']));
@@ -217,7 +218,8 @@ if (isset($_POST['submit'])) {
                         <?php
                         $conn = new mysqli("", "", "", "");
                         if ($conn->connect_error) {
-                            die("Ошибка подключения: " . $conn->connect_error);
+                            error_log("DB connection failed: " . $conn->connect_error);
+                            die("Ошибка подключения к базе данных");
                         }
 
                         $result = $conn->query("SELECT * FROM users ORDER BY created_at DESC");
